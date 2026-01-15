@@ -36,7 +36,7 @@ export default function LoginPage() {
     setSuccess(false);
 
     try {
-      const response = await fetch('http://localhost:9090/api/auth/login', {
+      const response = await fetch('https://eye-disease-detection-production.up.railway.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
