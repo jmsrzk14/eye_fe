@@ -36,7 +36,7 @@ export default function LoginPage() {
     setSuccess(false);
 
     try {
-      const response = await fetch('https://eye-disease-detection-production.up.railway.app/login', {
+      const response = await fetch('https://eye-disease-detection-production.up.railway.app/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
