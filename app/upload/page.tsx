@@ -47,11 +47,11 @@ export default function UploadPage() {
   useEffect(() => {
     const token = sessionStorage.getItem('token');
 
-    // if (!token) {
-    //   window.location.href = '/login';
-    // } else {
-    //   setIsAuthenticated(true);
-    // }
+    if (!token) {
+      window.location.href = '/login';
+    } else {
+      setIsAuthenticated(true);
+    }
 
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
