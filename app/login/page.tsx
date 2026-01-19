@@ -17,6 +17,7 @@ export default function LoginPage() {
   const [success, setSuccess] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     setIsVisible(true);
@@ -36,7 +37,7 @@ export default function LoginPage() {
     setSuccess(false);
 
     try {
-      const response = await fetch('https://eye-disease-detection-production.up.railway.app/api/auth/login', {
+      const response = await fetch('${API_URL}/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
