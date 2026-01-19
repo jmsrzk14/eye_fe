@@ -135,7 +135,7 @@ export default function UploadPage() {
         formData.append('file', file.file);
 
         try {
-          const res = await fetch('http://localhost:8000/predict', {
+          const res = await fetch('https://eyemodel-production.up.railway.app/predict', {
             method: 'POST',
             body: formData,
             headers: {
